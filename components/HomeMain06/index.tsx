@@ -92,7 +92,7 @@ export function HomeMain06() {
     <SectionStyle>
       <BackImage>
         <img
-          src={"/img/BackImg/HomeMain06BackImg.png"}
+          src={`${process.env.BACKEND_URL}/img/BackImg/HomeMain06BackImg.png`}
           width={1800}
           height={1050}
         />

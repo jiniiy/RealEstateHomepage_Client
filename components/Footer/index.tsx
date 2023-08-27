@@ -54,7 +54,9 @@ export function Footer() {
       <Grid container>
         <Grid item xs={3} md={3}>
           <FooterImg>
-            <img src="/img/FooterLogo/FooterLogo.png" />
+            <img
+              src={`${process.env.BACKEND_URL}/img/FooterLogo/FooterLogo.png`}
+            />
           </FooterImg>
         </Grid>
         <Grid item xs={7} md={7}>

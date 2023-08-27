@@ -32,14 +32,6 @@ export const HEADERLIST = [
     ],
   },
   {
-    title: "흥보센터",
-    subtitle: [
-      { label: "TVC&흥보영상", link: "x" },
-      { label: "언론보도", link: "y" },
-      { label: "", link: "z" },
-    ],
-  },
-  {
     title: "관심고객등록",
     subtitle: [
       { label: "관심고객등록", link: "x" },

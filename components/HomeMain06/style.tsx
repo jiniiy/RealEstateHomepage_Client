@@ -3,7 +3,7 @@ import styled from "@emotion/styled";
 export const SectionStyle = styled.div`
   width: 100%;
   height: 1050px;
-  /* background-color: #0c134f; */
+  background-color: #0c134f;
 `;
 
 export const BackImage = styled.div`
@@ -35,11 +35,13 @@ export const StyledContactForm = styled.div`
     align-items: flex-start;
     flex-direction: column;
     width: 100%;
+
     font-size: 16px;
 
     input {
-      width: 100%;
-      height: 35px;
+      width: 50%;
+      height: 50px;
+
       padding: 7px;
       outline: none;
       border-radius: 5px;

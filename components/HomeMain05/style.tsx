@@ -7,22 +7,22 @@ export const SectionStyle = styled.div`
 `;
 
 export const KakaoMap = styled.div`
-  width: 500px;
-  height: 400px;
+  width: 100%;
+  height: 500px;
 
-  background-color: green;
+  //background-color: green;
 `;
 
 export const HomeText = styled.div`
   /* position: relative; */
   /* visibility: hidden; */
-  display: flex;
+  /* display: flex;
   justify-content: center;
   align-items: center;
 
   width: 100%;
   height: 1000px;
-  padding-top: 100px;
+  padding-top: 100px; */
 
   color: white;
 

@@ -14,7 +14,7 @@ export const GrayBox = styled.div`
   left: 0%;
 
   z-index: 4;
-  background-color: gray;
+  background-color: #1d267d;
 `;
 
 export const HomeText = styled.div`
@@ -25,16 +25,10 @@ export const HomeText = styled.div`
   height: 650px;
 
   top: -50px;
-
   left: 100px;
-
   color: white;
 
   /* background-color: green; */
-
-  /* :hover {
-    
-  } */
 `;
 
 export const TextBox = styled.div`
@@ -43,11 +37,10 @@ export const TextBox = styled.div`
   height: 500px;
 
   top: -200px;
-
   padding: 125px 20px;
   z-index: 5;
 
-  background-color: pink;
+  /* background-color: orange; */
 `;
 
 export const Text = styled.p<{
@@ -66,13 +59,13 @@ export const BackImageDiv = styled.div`
   height: 100%;
 
   top: -525px;
-
-  background-color: red;
   z-index: 6;
+
+  /* background-color: red; */
 `;
 
 export const BackImage = styled.div`
-  background-color: yellow;
+  /* background-color: yellow; */
 
   .img {
     z-index: 999;

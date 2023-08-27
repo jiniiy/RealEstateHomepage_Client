@@ -38,7 +38,7 @@ export function StepperSlide() {
             <img
               width="700px"
               height="750px"
-              src={step.imgPath}
+              src={`${process.env.BACKEND_URL}${step.imgPath}`}
               alt={step.label}
             />
           </div>
