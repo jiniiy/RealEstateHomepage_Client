@@ -1,36 +1,39 @@
-import Menu from "@mui/icons-material/Menu";
-import Close from "@mui/icons-material/Close";
+// import Menu from "@mui/icons-material/Menu";
+// import Close from "@mui/icons-material/Close";
 import { Grid, IconButton } from "@mui/material";
-import {
-  HeaderStyle,
-  BuggerMenu,
-  Navigation,
-  StyledList,
-  TelInfo,
-} from "./style";
+import { HeaderStyle, BuggerMenu, StyledList, TelInfo } from "./style";
 import { HEADERLIST } from "@/constances/header";
 import Link from "next/link";
 import { useState } from "react";
 
 export function Header() {
-  const [open, setOpen] = useState(false);
-  const handleOpen = () => {
-    setOpen((open) => !open);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const handleMenu = () => {
+    setIsDropdownOpen((open) => !open);
   };
 
   return (
-    <HeaderStyle open={open}>
+    <HeaderStyle
+      onMouseEnter={handleMenu}
+      isDropdownOpen={isDropdownOpen}
+      onMouseLeave={handleMenu}
+    >
       <Grid container>
-        <Grid item xs={2} md={3}>
+        <Grid
+          item
+          xs={2}
+          md={2}
+          style={{ height: 50, display: "flex", alignItems: "center" }}
+        >
           <Link href="/">
             <img
-              src={`${process.env.BACKEND_URL}/img/LogoImg/logo.png`}
-              width={100}
-              height={50}
+              src={`${process.env.BACKEND_URL}/img/HeaderLogo/HeaderLogo.png`}
+              width={175}
+              height={39}
             />
           </Link>
         </Grid>
-        <Grid item xs={1} md={2}>
+        <Grid item xs={1} md={1}>
           <BuggerMenu>
             <IconButton
               className="svg_icons"
@@ -38,29 +41,27 @@ export function Header() {
               color="inherit"
               aria-label="menu"
               sx={{ mr: 2 }}
-              onClick={handleOpen}
+              // onClick={handleOpen}
             >
-              {open ? <Close /> : <Menu />}
+              {/* {open ? <Close /> : <Menu />} */}
             </IconButton>
           </BuggerMenu>
         </Grid>
-        <Grid item xs={8} md={8}>
-          <Navigation>
-            {HEADERLIST.map(({ title, subtitle }, index) => (
-              <StyledList key={index}>
-                <div>{title}</div>
-                <ul>
-                  {subtitle.map(({ label, link }, index) => {
-                    return (
-                      <li key={index}>
-                        <Link href={link}>{label}</Link>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </StyledList>
-            ))}
-          </Navigation>
+        <Grid item xs={8} md={8} display="flex">
+          {HEADERLIST.map(({ title, subtitle }, index) => (
+            <StyledList key={index}>
+              <div>{title}</div>
+              <ul>
+                {subtitle.map(({ label, link }, index) => {
+                  return (
+                    <li key={index}>
+                      <Link href={link}>{label}</Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </StyledList>
+          ))}
         </Grid>
         <Grid item xs={1} md={1}>
           <TelInfo>

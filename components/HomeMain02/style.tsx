@@ -5,11 +5,18 @@ export const SectionStyle = styled.div<{ visible: boolean }>`
   width: 100%;
   height: 1250px;
   position: relative;
-  background-color: #0c134f;
 
   opacity: ${({ visible }) => (visible ? 1 : 0)};
   overflow: hidden;
   transition: 2s ease;
+
+  background: linear-gradient(
+    to top,
+    #d6d9df 0%,
+    #d6d9df 20%,
+    #0c134f 70%,
+    #0c134f 100%
+  );
 
   /* :hover {
     .home-text {
@@ -67,7 +74,6 @@ export const BackImageDiv = styled.div`
 export const BackImage = styled.div`
   .img {
     background-size: cover;
-
     vertical-align: top;
     border: none;
   }
@@ -75,7 +81,22 @@ export const BackImage = styled.div`
 
 export const CarouselStyle = styled.div`
   width: 50%;
+  height: 750px;
+
   z-index: 3;
+
+  background-color: green;
+`;
+
+export const StepperSlide = styled.div`
+  width: 100%;
+  height: 600px;
+
+  background-color: red;
+`;
+
+export const SlideText = styled.div`
+  height: 150px;
 `;
 
 export const HomeText2 = styled.div`
