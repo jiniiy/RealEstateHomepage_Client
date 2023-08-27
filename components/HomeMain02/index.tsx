@@ -66,7 +66,7 @@ export const HomeMain02 = () => {
       <BackImageDiv>
         <BackImage>
           <img
-            src={"/img/BackImg/HomeMain02BackImg.png"}
+            src={`${process.env.BACKEND_URL}/img/BackImg/HomeMain02BackImg.png`}
             width={1800}
             height={1050}
           />

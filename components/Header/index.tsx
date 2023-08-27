@@ -23,7 +23,11 @@ export function Header() {
       <Grid container>
         <Grid item xs={2} md={3}>
           <Link href="/">
-            <img src="../../img/LogoImg/logo.png" width={100} height={50} />
+            <img
+              src={`${process.env.BACKEND_URL}/img/LogoImg/logo.png`}
+              width={100}
+              height={50}
+            />
           </Link>
         </Grid>
         <Grid item xs={1} md={2}>

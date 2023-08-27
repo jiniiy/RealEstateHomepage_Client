@@ -40,7 +40,7 @@ export function HomeMain04() {
           <BackImageDiv>
             <BackImage>
               <img
-                src={"/img/HomeMain04/HomeMain04Img.png"}
+                src={`${process.env.BACKEND_URL}/img/HomeMain04/HomeMain04Img.png`}
                 width={1400}
                 height={850}
               />
