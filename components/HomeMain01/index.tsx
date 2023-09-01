@@ -25,9 +25,9 @@ export function HomeMain01() {
       </video>
       <VideoButton isMuted={isMuted} onClick={toggleSound}>
         {isMuted ? (
-          <VolumeUpOutlinedIcon style={{ fontSize: 72 }} />
+          <VolumeOffOutlinedIcon style={{ fontSize: 64 }} />
         ) : (
-          <VolumeOffOutlinedIcon style={{ fontSize: 72 }} />
+          <VolumeUpOutlinedIcon style={{ fontSize: 64 }} />
         )}
       </VideoButton>
     </SectionStyle>

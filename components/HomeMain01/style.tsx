@@ -10,12 +10,8 @@ export const SectionStyle = styled.div`
 export const VideoButton = styled.button<{ isMuted: boolean }>`
   position: relative;
 
-  z-index: 999;
-
-  top: -200px;
+  top: -100px;
   left: 50px;
-
-  font-size: 50px;
 
   background-color: transparent;
   border: none;
