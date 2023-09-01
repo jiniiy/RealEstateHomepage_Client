@@ -1,5 +1,7 @@
 import { FOOTERCONTENTS } from "@/constances/footerContents";
 import { Grid, Button } from "@mui/material";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+
 import {
   FooterStyle,
   FooterList,
@@ -8,6 +10,14 @@ import {
   FooterButton,
 } from "./style";
 import Link from "next/link";
+
+const theme = createTheme({
+  palette: {
+    primary: {
+      main: "#E3F2Fd",
+    },
+  },
+});
 
 // import { SuppressHydrationWarning } from "react";
 
@@ -89,9 +99,11 @@ export function Footer() {
         </Grid>
         <Grid item xs={2} md={2}>
           <FooterButton>
-            <Button variant="outlined" color="warning" href="/">
-              TOP
-            </Button>
+            <ThemeProvider theme={theme}>
+              <Button variant="outlined" color="primary" href="/">
+                TOP
+              </Button>
+            </ThemeProvider>
           </FooterButton>
         </Grid>
       </Grid>

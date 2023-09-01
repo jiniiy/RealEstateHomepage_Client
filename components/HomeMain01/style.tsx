@@ -7,9 +7,16 @@ export const SectionStyle = styled.div`
   background-color: #0c134f;
 `;
 
-// export const VideoLayout = styled.div`
-//   width: 100%;
-//   height: 100vh;
-//   object-fit: cover;
+export const VideoButton = styled.button<{ isMuted: boolean }>`
+  position: relative;
 
-// `;
+  z-index: 999;
+
+  top: -200px;
+  left: 50px;
+
+  font-size: 50px;
+
+  background-color: transparent;
+  border: none;
+`;
