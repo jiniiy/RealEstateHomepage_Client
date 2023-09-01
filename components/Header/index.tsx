@@ -23,7 +23,12 @@ export function Header() {
           item
           xs={2}
           md={2}
-          style={{ height: 50, display: "flex", alignItems: "center" }}
+          style={{
+            height: 50,
+            display: "flex",
+            alignItems: "center",
+            paddingLeft: "25px",
+          }}
         >
           <Link href="/">
             <img
@@ -41,7 +46,7 @@ export function Header() {
               color="inherit"
               aria-label="menu"
               sx={{ mr: 2 }}
-              // onClick={handleOpen}
+              // onClick={handleOpen} //mediaquery Phone,Tablet show
             >
               {/* {open ? <Close /> : <Menu />} */}
             </IconButton>
@@ -65,7 +70,7 @@ export function Header() {
         </Grid>
         <Grid item xs={1} md={1}>
           <TelInfo>
-            <div>박과장</div>
+            {/* <div>박과장</div> */}
             <div>1644-3777</div>
           </TelInfo>
         </Grid>

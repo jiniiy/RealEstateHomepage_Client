@@ -7,14 +7,20 @@ export const HeaderStyle = styled.header<{ isDropdownOpen: boolean }>`
   width: 100%;
   top: 0;
   left: 0;
-  z-index: 10;
+  z-index: 11;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
   font-size: 18px;
   transition: 0.3s ease;
   height: ${({ isDropdownOpen }) => (isDropdownOpen ? "200px" : "50px")};
-  opacity: ${({ isDropdownOpen }) => (isDropdownOpen ? 1 : 0.5)};
+  opacity: ${({ isDropdownOpen }) => (isDropdownOpen ? 1 : 0.8)};
   background-color: ${({ isDropdownOpen }) =>
-    isDropdownOpen ? "#0c134f" : "rgba(255,255,255,0.5)"};
+    isDropdownOpen ? "#0c134f" : "#1D267D"};
+
+  .Link {
+    padding-left: 50px;
+
+    background-color: red;
+  }
 `;
 
 export const BuggerMenu = styled.div`
